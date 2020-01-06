@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  one:
+    container_name: one
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - 1313:1313
+    restart: always
+    tty: true
+    volumes:
+      - ../one-click-hugo-cms:/var/www/one-click-hugo-cms
